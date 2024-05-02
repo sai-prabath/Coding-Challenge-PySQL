@@ -52,7 +52,7 @@ class MainModule:
         if appointment:
             print(appointment)
         else:
-            print("Appointment not found.")
+            print(f"Appointment id {appointment_id} not found.")
 
     def get_appointments_for_patient(self):
         patient_id = input("Enter the Patient ID: ")
