@@ -15,8 +15,8 @@ class MainModule:
         print("4. Schedule Appointment")
         print("5. Update Appointment")
         print("6. Cancel Appointment")
-        print("6. Add Doctor")
-        print("6. Add Patient")
+        print("7. Add Doctor")
+        print("8. Add Patient")
         print("9. Exit")
 
     def run(self):
