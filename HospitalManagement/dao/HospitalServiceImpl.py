@@ -19,7 +19,7 @@ class HospitalServiceImpl(IHospitalService):
                 appointment = Appointment(*appointment_data)
                 return appointment
             else:
-                raise AppointmentNotFoundException(f"Appointment with ID {appointmentId} not found.")
+                return False
         except Error as e:
             print("Error Fetching Appointment: ", e)
             return None
