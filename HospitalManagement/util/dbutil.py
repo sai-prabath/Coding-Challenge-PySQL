@@ -8,7 +8,7 @@ class DBConnection:
     def getConnection():
         try:
             if DBConnection.connection is None or not DBConnection.connection.is_connected():
-                connection_string = PropertyUtil.getPropertyString("data.txt")
+                connection_string = PropertyUtil.getPropertyString("/Users/saiprabathchowdary/Documents/hexaware/segue foundation -python/Assignment/Coding-Challenge-PySQL/HospitalManagement/util/data.txt")
                 DBConnection.connection = mysql.connector.connect(**connection_string)
             return DBConnection.connection
         except Error as e:
@@ -20,9 +20,8 @@ class PropertyUtil:
     @staticmethod
     def getPropertyString(property_file):
         properties = {}
-        with open(property_file) as file:
+        with open(property_file,'r') as file:
             for line in file:
                 key, value = line.strip().split('=')
                 properties[key] = value
         return properties
-
